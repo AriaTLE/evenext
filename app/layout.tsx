@@ -24,11 +24,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+    <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    >
+    <div className="text-lg sticky top-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-8 text-white">
+        EveVolved
+    </div>
+    {/*<Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>*/}
+    {/*    EveVolved*/}
+    {/*</Text>*/}
+    {children}
+    </body>
     </html>
   );
 }
