@@ -10,6 +10,20 @@ export default function Home() {
           <source className="relative z-0" src="https://storage.googleapis.com/evemedia/For%20the%20Children.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+
+          <video width="100%" className="flex z-0">
+              <source className="relative z-0" src="https://storage.googleapis.com/evemedia/For%20the%20Children.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+          </video>
+          <video width="100%" className="flex z-0">
+              <source className="relative z-0" src="https://storage.googleapis.com/evemedia/For%20the%20Children.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+          </video>
+          <video width="100%" className="flex z-0">
+              <source className="relative z-0" src="https://storage.googleapis.com/evemedia/For%20the%20Children.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+          </video>
+
       </main>
     </div>
   );

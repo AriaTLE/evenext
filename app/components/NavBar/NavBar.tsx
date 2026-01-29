@@ -10,14 +10,14 @@ export default function NavBar() {
     const closeModal = () => setIsOpen(false);
 
     return (
-        <nav className="w-fullbg-gray-800 flex flex-row justify-between text-lg width 100% absolute top-0 right-0 left-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-8 text-white">
-            <div className="flex-col justify-start ">
+        <nav className="w-fullbg-gray-800 flex flex-row justify-between text-lg width 100% fixed top-0 right-0 left-0 bg-gradient-to-r z-10 from-blue-500 via-purple-500 to-pink-500 p-8 text-white">
+            <button className="flex-col justify-start hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-150">
                 EveVolved
 
-            </div>
+            </button>
             <button
                 onClick={openModal}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150"
+                className="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150"
             >
                 Join Us
             </button>
