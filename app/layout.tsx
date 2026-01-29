@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/app/components/NavBar/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,9 +28,8 @@ export default function RootLayout({
     <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-    <div className="text-lg sticky top-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-8 text-white">
-        EveVolved
-    </div>
+
+    <NavBar />
     {/*<Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>*/}
     {/*    EveVolved*/}
     {/*</Text>*/}

@@ -1,3 +1,5 @@
+# docker buildx build --platform=linux/amd64 -t ariatle/evenext:latest --push .
+
 # syntax=docker/dockerfile:1
 
 # Comments are provided throughout this file to help you get started.
