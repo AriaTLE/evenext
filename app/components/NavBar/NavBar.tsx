@@ -65,15 +65,6 @@ export default function NavBar() {
                     </button>
                 </div>
             </Modal>
-
         </nav>
-        // <div
-        //     className="flex flex-col text-lg width 100% sticky top-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-8 text-white">
-        //     <div className="flex">
-        //         EveVolved
-        //     </div>
-        //     <button className="text-lg right-0 ">JoinUs</button>
-        //
-        // </div>
     );
 }
