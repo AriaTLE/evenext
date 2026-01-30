@@ -1,9 +1,8 @@
-'use client'
 import Image from "next/image";
 // pages/index.js
 
-import { gql } from "@apollo/client";
-import createApolloClient from "./apollo-client";
+// import { gql } from "@apollo/client";
+// import createApolloClient from "./apollo-client";
 
 export default function Home() {
   return (

@@ -12,12 +12,16 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Forces the entire page to use light mode */
+/*:root {*/
+/*  color-scheme: light;*/
+/*}*/
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --background: #e0c5e6;*/
+/*    --foreground: #d5cece;*/
+/*  }*/
+/*}*/
 
 body {
   background: var(--background);

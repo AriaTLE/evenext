@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-
+# docker buildx build --platform=linux/amd64 -t ariatle/evenext:3b1f940 --push .
 # Comments are provided throughout this file to help you get started.
 # If you need more help, visit the Dockerfile reference guide at
 # https://docs.docker.com/go/dockerfile-reference/

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Modal from "@/app/components/Modal/Modal";
+import Link from "next/dist/client/link";
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,10 +12,10 @@ export default function NavBar() {
 
     return (
         <nav className="w-fullbg-gray-800 flex flex-row justify-between text-lg width 100% fixed top-0 right-0 left-0 bg-gradient-to-r z-10 from-blue-500 via-purple-500 to-pink-500 p-8 text-white">
-            <button className="flex-col justify-start hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-150">
-                EveVolved
+            <Link href="mission" className="flex-col justify-start hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-150">
+                EveVolved - A peaople first network.
 
-            </button>
+            </Link>
             <button
                 onClick={openModal}
                 className="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150"

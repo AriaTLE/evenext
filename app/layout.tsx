@@ -1,7 +1,9 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/app/components/NavBar/NavBar";
+import {ThemeProvider} from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,14 +28,16 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black dark:bg-black`}
     >
 
     <NavBar />
     {/*<Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>*/}
     {/*    EveVolved*/}
     {/*</Text>*/}
-    {children}
+    <ThemeProvider  attribute="class" defaultTheme="light" enableSystem={false}>
+      {children}
+    </ThemeProvider>
     </body>
     </html>
   );
