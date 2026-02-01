@@ -14,6 +14,7 @@
     "@mantine/core": "^8.3.13",
     "@mantine/hooks": "^8.3.13",
     "@tailwindplus/elements": "^1.0.22",
+    "axios": "^1.13.4",
     "graphql": "^16.12.0",
     "next": "16.1.4",
     "react": "19.2.3",

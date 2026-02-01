@@ -33,7 +33,12 @@ export default function RootLayout({
     {/*<Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>*/}
     {/*    EveVolved*/}
     {/*</Text>*/}
-    {children}
+    <div className="flex z-0 min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-pink-50">
+      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-pink-50 sm:items-start bg-gray-600 shadow-lg shadow-gray-500/50 ...">
+        {children}
+      </main>
+    </div>
+
     </body>
     </html>
   );
