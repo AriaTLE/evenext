@@ -13,8 +13,9 @@ export default function NavBar() {
 
     return (
         <nav className="w-fullbg-gray-800 flex flex-row justify-between text-lg width 100% fixed top-0 right-0 left-0 bg-gradient-to-r z-10 from-blue-500 via-purple-500 to-pink-500 p-8 text-white">
-            <Link href="/" className="flex-col justify-start hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-150">
-                EveVolved - The people first Network
+            <Link href="/"
+                  className="flex-col justify-start hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-150">
+                EveVolved
 
             </Link>
             <div>
