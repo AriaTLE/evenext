@@ -9,7 +9,7 @@ import Feed from "@/app/components/Feed/Feed";
 export default function Home() {
   return (<>
           <button className="flex-col justify-start bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-150 min-w-full mb-2.5">
-              The people first network <br />To two wonderful kids may they rest in peace.
+              The people first network <br />In Memory of two wonderful kids may they rest in peace.
           </button>
           {/*<div className="h-5">A tribute to two wonderful children lost way too soon.</div>*/}
           <video controls width="100%" className="flex z-0 mb-3">
