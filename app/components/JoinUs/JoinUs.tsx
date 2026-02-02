@@ -3,10 +3,12 @@
 import React, {ReactNode, useEffect, useState} from "react";
 import {CREATE_USER_MUTATION} from "@/app/graphql/mutations";
 import {gFetch} from "@/app/utilities/gFetch";
+import { useRouter } from 'next/navigation'; //
 
 
 
 export default function JoinUs({children, close}: { children: ReactNode, close?: () => void }) {
+    const router = useRouter();
 
     const [userName, setUserName] = useState('');
     const [email, setEmail] = useState('');
@@ -35,6 +37,7 @@ export default function JoinUs({children, close}: { children: ReactNode, close?:
                 }
             });
 
+            await router.push('profile');
             if (close) close();
         }
         createUser();
