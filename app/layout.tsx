@@ -1,7 +1,9 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/app/components/NavBar/NavBar";
+import RecoilContextProvider from "@/app/providers/recoilContextProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,15 +31,18 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
 
-    <NavBar />
-    {/*<Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>*/}
-    {/*    EveVolved*/}
-    {/*</Text>*/}
-    <div className="flex z-0 min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-pink-50">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-pink-50 sm:items-start bg-gray-600 shadow-lg shadow-gray-500/50 ...">
-        {children}
-      </main>
-    </div>
+    <RecoilContextProvider>
+      <NavBar />
+      {/*<Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>*/}
+      {/*    EveVolved*/}
+      {/*</Text>*/}
+      <div className="flex z-0 min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-pink-50">
+        <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-pink-50 sm:items-start bg-gray-600 shadow-lg shadow-gray-500/50 ...">
+          {children}
+        </main>
+      </div>
+
+    </RecoilContextProvider>
 
     </body>
     </html>

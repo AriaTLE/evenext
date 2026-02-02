@@ -11,6 +11,7 @@ export default function NavBar() {
     const openModal = () => setIsOpen(true);
     const closeModal = () => setIsOpen(false);
 
+    // @ts-ignore
     return (
         <nav className="w-fullbg-gray-800 flex flex-row justify-between text-lg width 100% fixed top-0 right-0 left-0 bg-gradient-to-r z-10 from-blue-500 via-purple-500 to-pink-500 p-8 text-white">
             <Link href="/"
@@ -32,14 +33,8 @@ export default function NavBar() {
                     Join Us
                 </button>
                 <Modal isOpen={isOpen} onClose={closeModal} title="Join Us">
-                    <JoinUs>
+                    <JoinUs close={closeModal}>
                         <div className="mt-4 flex justify-end">
-                            <button
-                                onClick={closeModal}
-                                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
-                            >
-                                Cancel - Account creation coming soon.
-                            </button>
                         </div>
                     </JoinUs>
                 </Modal>

@@ -6,8 +6,7 @@ export default function Home() {
     return (<>
 
             <div className="flex-col justify-start text-purple-700  font-bold py-2 px-4 rounded transition duration-150 min-w-full mb-2.5">
-                The Mission <br /><br/>I want to start by saying this organization is not for sale. I don't care how much money you have
-                I will just say no. My mission is to show people that there is a better way to treat people on this
+                The Mission <br /><br/>My/our mission is to show people that there is a better way to treat people on this
                 gorgeous home we call earth.<br/><br/>
 
                 This is going to be a social network but first it is just gonna be Aria's = (Oneness through love and melody) feed.
