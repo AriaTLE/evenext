@@ -11,3 +11,7 @@ export const GRAPHQL_QUERY = `query getNextUserByEmail($email:String!){
     }
   }
 }`;
+export const CHECK_EMAIL_EXISTS_QUERY = `query Query($email: String!) {
+  isEmailAvailable(email: $email)
+}`;
+

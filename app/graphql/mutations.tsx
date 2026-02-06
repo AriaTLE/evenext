@@ -13,3 +13,18 @@ export const CREATE_USER_MUTATION = `mutation CreateUser($newUserInput: NewUserI
     }
   }
 }`
+
+export const LOGIN_USER_MUTATION = `mutation LoginUser($credentialsInput: CredentialsInput) {
+  loginUser(credentialsInput: $credentialsInput) {
+    token
+    user {
+      id
+      userName
+      firstName
+      lastName
+      email
+      createdAt
+      updatedAt
+    }
+  }
+}`

@@ -4,8 +4,11 @@ import React, { useState } from 'react';
 import Modal from "@/app/components/Modal/Modal";
 import JoinUs from "@/app/components/JoinUs/JoinUs";
 import Link from "next/dist/client/link";
+import {userAtom} from "@/app/atoms/User";
+import {useAtomState} from "@zedux/react";
 
 export default function NavBar() {
+    const [user, setUser] = useAtomState(userAtom);
     const [isOpen, setIsOpen] = useState(false);
 
     const openModal = () => setIsOpen(true);
@@ -32,12 +35,19 @@ export default function NavBar() {
                 >
                     Join Us
                 </button>
-                <Modal isOpen={isOpen} onClose={closeModal} title="Join Us">
-                    <JoinUs close={closeModal}>
-                        <div className="mt-4 flex justify-end">
-                        </div>
-                    </JoinUs>
-                </Modal>
+                {user.isLoggedIn ? <Link href="/profile" className="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150">Profile</Link> :
+
+                    <Modal isOpen={isOpen} onClose={closeModal} title="Join Us">
+                        <JoinUs close={closeModal}>
+                            <div className="mt-4 flex justify-end">
+                            </div>
+                        </JoinUs>
+                    </Modal>}
+                {/*{user.isLoggedIn ? <>hi {user.username}</> : <>*/}
+                {/*    */}
+                {/*</>*/}
+                {/*}*/}
+
             </div>
         </nav>
     );

@@ -1,6 +1,6 @@
 import axios from "axios";
-const SERVER_URL = "http://api.evevolved.org/";
-
+// const SERVER_URL = "https://api.evevolved.org/";
+const SERVER_URL = "http://localhost:3007";
 
 
 export async function gFetch(query:any, variables:any) {

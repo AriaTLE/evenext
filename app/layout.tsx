@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/app/components/NavBar/NavBar";
-import RecoilContextProvider from "@/app/providers/recoilContextProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,8 +29,6 @@ export default function RootLayout({
     <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-
-    <RecoilContextProvider>
       <NavBar />
       {/*<Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>*/}
       {/*    EveVolved*/}
@@ -41,9 +38,6 @@ export default function RootLayout({
           {children}
         </main>
       </div>
-
-    </RecoilContextProvider>
-
     </body>
     </html>
   );
