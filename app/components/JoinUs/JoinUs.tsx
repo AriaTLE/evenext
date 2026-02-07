@@ -37,8 +37,8 @@ export default function JoinUs({children, close}: { children: ReactNode, close?:
         // const isValid = validateEmail(emailToValidate);
         // console.log(isValid);
         // if (isValid) {
-            console.log('setting')
-            setEmailToCheck(emailToValidate);
+        console.log('setting')
+        setEmailToCheck(emailToValidate);
         // }
     }
 
@@ -58,6 +58,7 @@ export default function JoinUs({children, close}: { children: ReactNode, close?:
                 "email": emailToCheck
             });
 
+            console.log('hi')
             setIsNewUser(response.data.isEmailAvailable);
             setFieldsHidden(!response.data.isEmailAvailable);
             setEmail(emailToCheck);
@@ -105,7 +106,7 @@ export default function JoinUs({children, close}: { children: ReactNode, close?:
     const fireEmailFocus = () => {
         setDidEmailBlur(false);
         setIsNewUser(false);
-        setFieldsHidden(true);
+        setFieldsHidden(false);
     }
     return (<>
         <div className="mb-4">
@@ -131,8 +132,8 @@ export default function JoinUs({children, close}: { children: ReactNode, close?:
                 Username
             </label>
             <input onChange={(event) => setUserName(event.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="username" type="text" placeholder="Username"/>
+                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   id="username" type="text" placeholder="Username"/>
         </div>
 
         <div hidden={fieldsHidden} className="mb-4">
@@ -148,16 +149,16 @@ export default function JoinUs({children, close}: { children: ReactNode, close?:
                 First Name
             </label>
             <input onChange={(event) => setFirstName(event.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="firstName" type="text" placeholder="First Name"/>
+                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   id="firstName" type="text" placeholder="First Name"/>
         </div>
         <div hidden={fieldsHidden} className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
                 Last Name
             </label>
             <input onChange={(event) => setLastName(event.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="lastName" type="text" placeholder="Last Name"/>
+                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   id="lastName" type="text" placeholder="Last Name"/>
         </div>
 
         <button
