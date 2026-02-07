@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fae4bb48-d19a-47ee-9a7d-ea23df8e60a1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/JoinUs/JoinUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/JoinUs/JoinUs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kube/deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.kube/deploy.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -87,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1770406739518</updated>
       <workItem from="1770406740588" duration="1070000" />
-      <workItem from="1770412775476" duration="2339000" />
+      <workItem from="1770412775476" duration="2854000" />
     </task>
     <servers />
   </component>
