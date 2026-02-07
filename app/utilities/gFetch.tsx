@@ -1,5 +1,5 @@
 import axios from "axios";
-const SERVER_URL = "https://api.evevolved.org/";
+const SERVER_URL = "https://api.eve-network.com/";
 // const SERVER_URL = "http://localhost:3007";
 
 

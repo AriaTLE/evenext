@@ -1,4 +1,4 @@
-# docker buildx build --platform=linux/amd64 -t ariatle/evenext:302492d --push .
+# docker buildx build --platform=linux/amd64 -t ariatle/evenext:b30d2a4 --push .
 
 # syntax=docker/dockerfile:1
 
