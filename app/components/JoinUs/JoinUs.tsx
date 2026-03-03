@@ -54,16 +54,20 @@ export default function JoinUs({children, close}: { children: ReactNode, close?:
     useEffect(() => {
         if (!didEmailBlur) return;
         const checkEmailExists = async () => {
-            const response = await gFetch(CHECK_EMAIL_EXISTS_QUERY, {
-                "email": emailToCheck
-            });
+            try {
+                const response = await gFetch(CHECK_EMAIL_EXISTS_QUERY, {
+                    "email": emailToCheck
+                });
 
-            console.log('hi')
-            setIsNewUser(response.data.isEmailAvailable);
-            setFieldsHidden(!response.data.isEmailAvailable);
-            setEmail(emailToCheck);
-            setSignupLoginText(response.data.isEmailAvailable ? 'Sign Up' : 'Login');
-            setDidEmailBlur(false);
+                console.log(response);
+                setIsNewUser(response.data.isEmailAvailable);
+                setFieldsHidden(!response.data.isEmailAvailable);
+                setEmail(emailToCheck);
+                setSignupLoginText(response.data.isEmailAvailable ? 'Sign Up' : 'Login');
+                setDidEmailBlur(false);
+            } catch (e) {
+                console.log(e);
+            }
         }
         if (emailToCheck) {
             checkEmailExists();
@@ -106,7 +110,7 @@ export default function JoinUs({children, close}: { children: ReactNode, close?:
     const fireEmailFocus = () => {
         setDidEmailBlur(false);
         setIsNewUser(false);
-        setFieldsHidden(false);
+        setFieldsHidden(true);
     }
     return (<>
         <div className="mb-4">
